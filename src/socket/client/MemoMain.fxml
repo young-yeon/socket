@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.298" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socket.client.GUIController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <TableView fx:id="memoTable" layoutX="-3.0" layoutY="-1.0" prefHeight="323.0" prefWidth="182.0">
+                    <columns>
+                        <TableColumn fx:id="memo" prefWidth="181.0" text="memo" />
+                    </columns>
+                </TableView>
+                <Button fx:id="btnGo" layoutX="79.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleMemoGo" prefHeight="22.0" prefWidth="34.0" text="Go" />
+                <PasswordField fx:id="password" layoutX="18.0" layoutY="362.0" prefHeight="22.0" prefWidth="57.0" />
+                <Button fx:id="btnAdd" layoutX="117.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleMemoAdd" text="Add" />
+                <Button fx:id="btnDelete" layoutX="120.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleMemoDelete" text="Del" />
+            <TextField fx:id="memoNameForSave" layoutX="18.0" layoutY="330.0" prefHeight="22.0" prefWidth="95.0" text="sample,pwd" />
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <Label fx:id="memoName" layoutX="171.0" layoutY="7.0" prefHeight="14.0" prefWidth="75.0" text="Blank" />
+                <TextArea fx:id="memoArea" layoutY="31.0" prefHeight="367.0" prefWidth="417.0"/>
+            <Button fx:id="btnSave" layoutX="358.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleMemoSave" text="Save" />
+            </children></AnchorPane>
+    </items>
+</SplitPane>
