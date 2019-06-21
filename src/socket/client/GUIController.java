@@ -22,7 +22,7 @@ public class GUIController implements Initializable{
     @FXML TableView<TableViewModel> memoTable;
     @FXML TableColumn<TableViewModel, String> memo;
 
-    ObservableList<TableViewModel> memoList;
+    private ObservableList<TableViewModel> memoList;
 
     private void tableSet() {
         memoList = ClientHandler.getList();
